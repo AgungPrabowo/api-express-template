@@ -23,4 +23,4 @@ docker-compose up
 
 ## License
 
-MIT
+[MIT License](http://www.opensource.org/licenses/mit-license.php)
