@@ -9,8 +9,6 @@ This is a straightforward boilerplate for building REST APIs with ES6 and Expres
 
 ## Getting Started
 
----
-
 ### Clone Project
 
 ```sh
@@ -24,7 +22,5 @@ docker-compose up
 ```
 
 ## License
-
----
 
 MIT
