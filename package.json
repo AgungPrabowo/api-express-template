@@ -1,0 +1,36 @@
+{
+  "name": "api-express-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --legacy-watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgungPrabowo/api-express-template.git"
+  },
+  "author": "Agung Prabowo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AgungPrabowo/api-express-template/issues"
+  },
+  "homepage": "https://github.com/AgungPrabowo/api-express-template#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mariadb": "^2.5.4",
+    "nodemon": "^2.0.13",
+    "sequelize": "^6.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "prettier": "^2.4.1"
+  }
+}
