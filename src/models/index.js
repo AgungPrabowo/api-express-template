@@ -7,13 +7,18 @@ const sequelize = new Sequelize(
   {
     host: 'mariadb',
     dialect: 'mariadb',
-    port: process.env.MARIADB_PORT,
+    port: process.env.MARIADB_PORT_CONTAINER,
+    dialectOptions: {
+      dateStrings: true,
+      typeCast: true,
+    },
     pool: {
       max: 5,
       min: 0,
       acquire: 30000,
       idle: 10000,
     },
+    timezone: 'Asia/Jakarta',
   }
 )
 

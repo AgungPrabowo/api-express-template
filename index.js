@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const db = require('./src/models')
 
-const port = process.env.APP_PORT || 3001
+const port = process.env.CONTAINER_PORT
 
 // parse requests of content-type - application/json
 app.use(express.json())
@@ -21,5 +21,5 @@ app.use(cors())
 require('./src/routes/routes')(app)
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}.`)
+  console.log(`Server is running on port ${process.env.APP_PORT}.`)
 })
