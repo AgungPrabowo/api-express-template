@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const db = require('./src/models')
 
-const port = process.env.CONTAINER_PORT
+const port = 3001
 
 // parse requests of content-type - application/json
 app.use(express.json())

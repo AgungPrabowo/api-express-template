@@ -14,16 +14,16 @@ services:
     networks:
       - example-network
     ports:
-      - ${MARIADB_PORT_APP}:${MARIADB_PORT_CONTAINER}
+      - ${MARIADB_PORT}:3306
   api-service-example:
     container_name: '${APP_NAME}_app'
     build: .
     networks:
       - example-network
     ports:
-      - ${APP_PORT}:${CONTAINER_PORT}
+      - ${APP_PORT}:3001
     environment:
-      WAIT_HOSTS: mariadb:${MARIADB_PORT_CONTAINER}
+      WAIT_HOSTS: mariadb:3306
     volumes:
       - .:/app
 networks:
