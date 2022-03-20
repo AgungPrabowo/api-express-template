@@ -17,6 +17,9 @@ db.sequelize.sync()
 // config CORS
 app.use(cors())
 
+// provide public files
+app.use(express.static(__dirname.concat('/public')))
+
 // initial routing
 require('./src/routes/routes')(app)
 
