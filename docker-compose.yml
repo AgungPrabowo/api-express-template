@@ -7,6 +7,7 @@ services:
       MARIADB_USER: '${MARIADB_USER}'
       MARIADB_PASSWORD: '${MARIADB_PASSWORD}'
       MARIADB_ROOT_PASSWORD: '${MARIADB_ROOT_PASSWORD}'
+      TZ: '${TIME_ZONE}'
     restart: always
     volumes:
       - db_data:/var/lib/mysql
@@ -14,7 +15,7 @@ services:
     networks:
       - example-network
     ports:
-      - ${MARIADB_PORT_APP}:${MARIADB_PORT_CONTAINER}
+      - ${MARIADB_PORT}:3306
   api-service-example:
     container_name: '${APP_NAME}_app'
     build: .
@@ -23,7 +24,7 @@ services:
     ports:
       - ${APP_PORT}:${CONTAINER_PORT}
     environment:
-      WAIT_HOSTS: mariadb:${MARIADB_PORT_CONTAINER}
+      WAIT_HOSTS: mariadb:3306
     volumes:
       - .:/app
 networks:
