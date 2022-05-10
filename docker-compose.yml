@@ -22,7 +22,7 @@ services:
     networks:
       - example-network
     ports:
-      - ${APP_PORT}:${CONTAINER_PORT}
+      - ${APP_PORT}:3001
     environment:
       WAIT_HOSTS: mariadb:3306
     volumes:

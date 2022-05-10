@@ -1,6 +1,11 @@
 FROM node:16-alpine3.11
 
+# Install base packages
 RUN apk update && apk add ca-certificates openssl && update-ca-certificates
+
+# Set timezone
+RUN apk add --no-cache tzdata
+ENV TZ Asia/Jakarta
 
 RUN mkdir /app
 ADD . /app
